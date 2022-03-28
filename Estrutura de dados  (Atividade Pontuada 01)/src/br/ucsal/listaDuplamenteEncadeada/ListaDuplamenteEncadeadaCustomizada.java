@@ -164,7 +164,66 @@ public class ListaDuplamenteEncadeadaCustomizada {
 	
 
 
+	public String get(int index) {
+		
+		if(index >= tamanho) {
+			throw new IndexOutOfBoundsException("Index: " + index + ", Tamanho: " + tamanho);
+		}
+		
+		No noAuxiliar;
+		int count = 0;
+		
+		if(index ==0) {
+			return inicio.info;
+		}
+		
+		if(index == tamanho-1) {
+			return noFinal.info;
+		}
+		
+		
+		if(index < tamanho/2) {
+			noAuxiliar = inicio;
+			
+			while(noAuxiliar.proximo != null) {
+				count ++;
+				
+				if(index == count ) {
+					return noAuxiliar.proximo.info;
+				}else {
+					noAuxiliar = noAuxiliar.proximo;
+				}
 
+		
+							
+			}
+			
+		}else {
+			noAuxiliar = noFinal;
+			
+			while(noAuxiliar.anterior != null) {
+				count ++;
+				
+				if(index == (tamanho)-count ) {
+					return noAuxiliar.proximo.info;
+				}else {
+					noAuxiliar = noAuxiliar.anterior;
+					
+				}
+
+		
+							
+			}
+			
+			
+		}
+		
+	
+		
+		return null;
+		
+		
+	}
 	
 
 	
