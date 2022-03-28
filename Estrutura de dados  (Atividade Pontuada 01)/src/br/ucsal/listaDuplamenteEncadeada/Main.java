@@ -1,4 +1,4 @@
-package br.ucsal.linkedList;
+package br.ucsal.listaDuplamenteEncadeada;
 
 
 
@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		ListaEncadeadaCustomizada lista = new ListaEncadeadaCustomizada();
+		ListaDuplamenteEncadeadaCustomizada lista = new ListaDuplamenteEncadeadaCustomizada();
 		lista.inserirInicio("HAMILTON BATISTA");
 		lista.inserirNoFinal("LUIZ ALBERTO");
 		lista.inserirNoFinal("MARCO ANTONIO");
@@ -32,9 +32,11 @@ public class Main {
 		
 		System.out.println(lista);
 		
-		lista.removerDoMeio(5);
+		lista.removerDoMeio(15);
 		
-		System.out.println("Meu nome está na lista? " + lista.estaNaLista("MATHEUS BARRETO"));
+	//	System.out.println("Meu nome está na lista? " + lista.estaNaLista("MATHEUS BARRETO"));
+		
+		lista.removerDoFinal();
 		
 		System.out.println(lista);
 
